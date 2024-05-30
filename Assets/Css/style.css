@@ -4,6 +4,7 @@
     --backgroundcolor: #232323;
     --light-color: #ffffff;
     --light-blue: #1e31d9;
+    --light-orange: #f08808;
 }
 
 /* ----------------------
@@ -15,12 +16,15 @@ Global Css
     font-family: var(--text-font);
     text-decoration: none;
     list-style: none;
+    text-transform: capitalize;
 }
 
 body {
     background-color: var(--backgroundcolor);
 
 }
+
+
 
 /* ----------------------
 Header Css
@@ -59,10 +63,11 @@ Header Css
 }
 
 
-.navbar-nav .nav-item button {
+.navbar-nav .nav-item button,
+.home-content .home-bttn button {
     border: none;
     color: var(--light-color);
-    min-width: 150px;
+    min-width: 160px;
     min-height: 50px;
     border-radius: 30px;
     font-weight: 500;
@@ -70,7 +75,8 @@ Header Css
     transition: all 0.3s;
 }
 
-.navbar-nav .nav-item button:hover {
+.navbar-nav .nav-item button:hover,
+.home-content .home-bttn button:hover {
     color: var(--light-blue);
     background-color: var(--light-color);
 }
@@ -86,4 +92,78 @@ Header Css
 .offcanvas-header .btn-close {
     background-color: var(--light-color);
 
+}
+
+/* ----------------------
+Home Css
+------------------------- */
+
+
+
+.row {
+    display: flex;
+    width: 100%;
+
+    margin: 20px auto;
+    padding: 10px;
+    gap: 1px;
+}
+
+
+
+.col {
+
+    width: 50%;
+
+}
+
+.home-img img {
+    padding-top: 30px;
+    width: 150%;
+    margin-left: -120px;
+    transition: all 1s;
+
+}
+
+.home-img img:hover {
+    transform: rotate(2deg);
+}
+
+.home-content {
+    padding: 90px 40px;
+
+}
+
+.home-content h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--light-color);
+}
+
+.home-content h1 span {
+    color: var(--light-orange);
+}
+
+.home-content p {
+    color: #7e7e7e;
+    margin-top: 20px;
+
+}
+
+.home-content .home-bttn button {
+    margin: 30px 10px;
+
+}
+
+
+.home-content .home-bttn button:last-child {
+    background-color: var(--backgroundcolor);
+    color: var(--light-color);
+    box-shadow: 0px 0px 2px 0px var(--light-color);
+}
+
+.home-content .home-bttn button:last-child:hover {
+    background-color: var(--backgroundcolor);
+    color: var(--light-blue);
+    box-shadow: 0px 0px 2px 0px var(--light-blue);
 }
